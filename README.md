@@ -1,69 +1,82 @@
-# SUPERNOVA Audio — React + TypeScript
+Supernova
 
-A single-page product website for SUPERNOVA Audio, rebuilt from the original project into a simpler V2 architecture while preserving the existing design, content, responsive behavior and interactions.
+A self-initiated, responsive single-page product website built with React, TypeScript, Tailwind CSS, and Vite.
 
-## Stack
+Supernova was designed and developed as a personal project to practice modern frontend development, UI composition, responsive design, component architecture, animations, and AI-assisted development workflows.
 
-- React 19
-- TypeScript
-- Vite
-- Tailwind CSS
+✨ Features
 
-## Project Structure
+* Responsive desktop and mobile layouts
+* Hero, Features, Specs, About, Testimonials, Contact and Footer sections
+* Animated product interactions and UI elements
+* Responsive navigation with mobile menu
+* Reusable pill buttons, cards, inputs, modals and other UI components
+* Order modal and contact form
+* Product imagery and background video assets
+* Clean component-based architecture
+
+🛠 Tech Stack
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* PostCSS
+* ESLint
+
+📁 Architecture
+
+The project is organized around reusable UI, page sections, and feature-specific logic:
 
 ```text
 src/
-├── App.tsx
-├── main.tsx
 ├── components/
-│   ├── ui/              # reusable visual primitives
-│   └── layout/          # global Navbar and Footer
-├── sections/             # major page sections
-│   ├── Hero/
-│   ├── Features/
-│   ├── Specs/
-│   ├── Testimonials/
-│   ├── About/
-│   └── Contact/
+│   ├── ui/
+│   └── layout/
+├── sections/
 ├── features/
-│   └── order/            # order-specific behavior and modal
-├── hooks/                # genuinely shared React behavior
-├── data/                 # static content
-├── types/                # shared TypeScript types
-├── assets/               # logos, product images and video
+├── hooks/
+├── data/
+├── types/
+├── assets/
 └── styles/
-    └── index.css         # global CSS and shared responsive/animation rules
 ```
 
-## Architecture
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for the project structure and responsibilities.
 
-Reusable UI stays in `components/ui`. Page-specific presentation stays in `sections`. Order-specific behavior is isolated in `features/order`. Shared hooks, data and types are kept separate only where they are genuinely shared.
+🤖 AI-Assisted Development
 
-`App.tsx` owns the single Order Modal open/close state and passes the open callback to components that trigger ordering.
+This project was built using an **AI-assisted development workflow with LLMs**.
 
-## Main Sections
+LLMs were used as development tools for tasks such as:
 
-- Navbar
-- Hero
-- Features
-- Specifications
-- Testimonials
-- About
-- Contact
-- Footer
-- Order Modal
+* generating and restructuring implementation code
+* exploring component architecture
+* debugging and resolving TypeScript/build issues
+* refactoring scattered code into a maintainable structure
+* improving development speed during iteration
 
-## Run locally
+The architecture, requirements, visual direction, feature decisions, implementation review, testing, debugging decisions, and final integration were directed and reviewed by me.
+
+AI was used as an engineering tool, not as a replacement for understanding or decision-making.
+
+🚀 Run Locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Production build
+For a production build:
 
 ```bash
 npm run build
 ```
 
-The project is Vercel-ready using the normal Vite build output.
+📌 Project Status
+
+Completed personal frontend project and used as a foundation for further React, TypeScript, and AI-assisted development work.
+
+📄 License
+
+This project is a personal portfolio project.
