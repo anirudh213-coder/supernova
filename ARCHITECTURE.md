@@ -1,11 +1,13 @@
-Supernova Architecture
+# Supernova Architecture
 
-Overview
+## Overview
 
 Supernova uses a lightweight component and feature-based architecture designed to keep the project understandable without unnecessary abstraction.
 
-Structure
 
+## Structure
+
+```text
 src/
 ├── components/
 │   ├── ui/
@@ -29,49 +31,49 @@ src/
 └── styles/
 ```
 
-`components/ui`
+### `components/ui`
 
 Generic reusable UI elements such as buttons, cards, inputs, badges, modals and section headings.
 
 These components should remain independent of specific page sections.
 
-`components/layout`
+### `components/layout`
 
 Global layout components such as the Navbar and Footer.
 
-`sections`
+### `sections`
 
 Major page sections that belong specifically to the Supernova website.
 
 Each section owns its page-specific presentation and behavior.
 
-`features`
+### `features`
 
 Feature-specific functionality.
 
 The current example is the order flow and Order Modal.
 
-`hooks`
+### `hooks`
 
 Reusable React hooks shared by multiple parts of the application.
 
-`data`
+### `data`
 
 Static content such as navigation items, specifications, features and testimonials.
 
-`types`
+### `types`
 
 Shared TypeScript types used across the application.
 
-`assets`
+### `assets`
 
 Images, icons, videos and other static assets.
 
-`styles`
+### `styles`
 
 Global styling, including the main stylesheet.
 
-Design Principles
+## Design Principles
 
 * Prefer simple solutions over unnecessary abstraction.
 * Reuse UI components when they have genuine repeated use.
@@ -81,7 +83,7 @@ Design Principles
 * Preserve responsive behavior across desktop and mobile.
 * Keep the architecture scalable without unnecessarily increasing the number of files or abstractions.
 
-AI-Assisted Workflow
+## AI-Assisted Workflow
 
 LLMs were used throughout development for code generation, refactoring, debugging, architectural exploration and implementation assistance.
 

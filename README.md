@@ -1,10 +1,10 @@
-Supernova
+# Supernova
 
 A self-initiated, responsive single-page product website built with React, TypeScript, Tailwind CSS, and Vite.
 
 Supernova was designed and developed as a personal project to practice modern frontend development, UI composition, responsive design, component architecture, animations, and AI-assisted development workflows.
 
-✨ Features
+## ✨ Features
 
 * Responsive desktop and mobile layouts
 * Hero, Features, Specs, About, Testimonials, Contact and Footer sections
@@ -15,7 +15,7 @@ Supernova was designed and developed as a personal project to practice modern fr
 * Product imagery and background video assets
 * Clean component-based architecture
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 
 * React
 * TypeScript
@@ -24,7 +24,7 @@ Supernova was designed and developed as a personal project to practice modern fr
 * PostCSS
 * ESLint
 
-📁 Architecture
+## 📁 Architecture
 
 The project is organized around reusable UI, page sections, and feature-specific logic:
 
@@ -44,7 +44,7 @@ src/
 
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for the project structure and responsibilities.
 
-🤖 AI-Assisted Development
+## 🤖 AI-Assisted Development
 
 This project was built using an **AI-assisted development workflow with LLMs**.
 
@@ -60,7 +60,7 @@ The architecture, requirements, visual direction, feature decisions, implementat
 
 AI was used as an engineering tool, not as a replacement for understanding or decision-making.
 
-🚀 Run Locally
+## 🚀 Run Locally
 
 ```bash
 npm install
@@ -73,10 +73,10 @@ For a production build:
 npm run build
 ```
 
-📌 Project Status
+## 📌 Project Status
 
 Completed personal frontend project and used as a foundation for further React, TypeScript, and AI-assisted development work.
 
-📄 License
+## 📄 License
 
 This project is a personal portfolio project.
