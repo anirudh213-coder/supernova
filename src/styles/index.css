@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0b0f17;
+    color: #f8fafc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  svg {
+    transition-property: color, background-color, border-color, opacity, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+}
+
+/* ==========================================
+   ABOUT SECTION RESPONSIVE STYLES
+   ========================================== */
+
+/* Mobile Breakpoint (< 1024px) */
+@media (max-width: 1023px) {
+  .about-mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background-color: rgba(19, 27, 46, 0.7);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+  }
+
+  .about-mobile-img-box {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+  }
+
+  .about-mobile-card-content {
+    padding: 1.25rem;
+    background-color: rgba(11, 15, 23, 0.95);
+    border-top: 1px solid rgba(51, 65, 85, 0.6);
+  }
+
+  .about-mobile-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Desktop Breakpoint (>= 1024px) */
+@media (min-width: 1024px) {
+  .about-desktop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .about-desktop-card {
+    background-color: rgba(19, 27, 46, 0.7);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .about-desktop-card:hover {
+    border-color: rgba(34, 211, 238, 0.4);
+    transform: translateY(-0.25rem);
+  }
+
+  .about-desktop-carousel {
+    position: relative;
+    min-height: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(51, 65, 85, 0.8);
+    background-color: rgba(19, 27, 46, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* ==========================================
+   FEATURES SECTION RESPONSIVE STYLES
+   ========================================== */
+
+/* Shared Features Pagination Dots (Mobile) */
+.features-dot {
+  height: 0.5rem;
+  border-radius: 9999px;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.features-dot-active {
+  width: 2rem;
+  background-color: #22d3ee;
+}
+
+.features-dot-inactive {
+  width: 0.5rem;
+  background-color: #334155;
+}
+
+.features-dot-inactive:hover {
+  background-color: #64748b;
+}
+
+/* Mobile Breakpoint (< 1024px) */
+@media (max-width: 1023px) {
+  .features-mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background-color: rgba(19, 27, 46, 0.7);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  }
+
+  .features-mobile-img-box {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .features-mobile-content {
+    padding: 1.25rem;
+    background-color: rgba(11, 15, 23, 0.95);
+    border-top: 1px solid rgba(51, 65, 85, 0.6);
+  }
+}
+
+/* ==========================================
+   SPECS SECTION RESPONSIVE STYLES
+   ========================================== */
+
+/* Shared Specs Pagination Dots (Mobile) */
+.specs-dot {
+  height: 0.4rem;
+  border-radius: 9999px;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.specs-dot-active {
+  width: 1.5rem;
+  background-color: #22d3ee;
+}
+
+.specs-dot-inactive {
+  width: 0.4rem;
+  background-color: #334155;
+}
+
+.specs-dot-inactive:hover {
+  background-color: #64748b;
+}
+
+/* Animations & Smooth Transitions */
+@keyframes specsContentFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-specs-fade {
+  animation: specsContentFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Accessibility: Reduced motion settings */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
